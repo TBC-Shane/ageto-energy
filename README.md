@@ -18,3 +18,17 @@ The pins and tooltips are created using the following .eps file: GlobeIllustrati
 1. For your new tooltip layer, use the following naming convention: _Location # Project Information_, where _#_ is your current pin number. For this example, our layer would be named, _Location 17 Project Information_.
 1. Position this layer next to its corresponding pin.
 1. With your new tooltip layer named and positioned, we'll now be adding it to the pin layer group you created earlier. Open the Layers panel and select your tooltip layer. Now, drag it **into** the corresponding pin layer. When dragging a layer into another, you'll notice the layer highlights instead of showing a line above or below the layer. In this example, we'll be dragging the _Location 17 Project Information_ layer **into** the _Location 17_ layer.
+1. Ensure all of your other layers follow this same naming convention and grouping.
+
+## Exporting
+1. Select the entire pins layer (all of our pins and their corresponding tooltips should be in this group) and drag it into the Asset Export panel.
+1. Choose **SVG** under format.
+1. Name the export _globe_locations_pins_date.svg_, where _date_ is the date of your export.
+1. Click **Export**. Save the file to Dropbox: **/Active/AGT_Ageto Energy/20AGT0002-0004_Ageto Website Redesign Campaign/20AGT0004_Brand Implementation_Website Design and Front-End Development/Production Files/Comps/Art_Images/_website/illustrations/**. Illustrator will automatically save the new file under the SVG folder in this directory. 
+
+### Resaving the export
+1. Navigate to the file folder where you saved your new file. Open the SVG in Illustrator and then re-save the file into the same location. This will un-minify the file and will make it easier to edit. 
+
+### Modify the SVG
+1. Now open the file in the code editor of your choice.
+1. **Shane to finish SOP here** (add `.project-information` class, add new Location class to CSS file, copy and paste SVG code to the website, etc.)
