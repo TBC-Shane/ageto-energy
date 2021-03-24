@@ -6,12 +6,12 @@ CSS is also required to enable the hover states of the various pins on the page.
 
 The pins and tooltips are created using the following Sketch file: GlobeIllustrationBlue_DEV. The workflow for generating this file, and then modifying it for interaction is as follows:
 1. Open GlobeIllustrationBlue_DEV using Sketch. If you do not own a copy of the Sketch application, you can purchase it [here.](https://www.sketch.com/)
-2. Down the left-hand side of the application you will find a list of layers. Spin down the `pins` layer and then spin down the `Pin Icons` layer.  
-3. Duplicate one of the existing pin layers by right-clicking on the layer name (e.g. _Location_24_) and selecting Duplicate. Rename it in the layers panel to the next location number in the string. For example, if there are 24 existing pins, rename your pin layer to _Location 25_. **The naming of each of the layers in this walkthrough is crucial to saving time and to maintaining an orderly and programmable file structure when output as an SVG file.**
+2. Down the left-hand side of the application you will find a list of layers. Spin down the _pins_ layer and then spin down the _Pin Icons_ layer.  
+3. Duplicate one of the existing pin layers by right-clicking on the layer name (e.g. `Location_24`) and selecting Duplicate. Rename it in the layers panel to the next location number in the string. For example, if there are 24 existing pins, rename your pin layer to `Location_25`. **The naming of each of the layers in this walkthrough is crucial to saving time and to maintaining an orderly and programmable file structure when output as an SVG file.**
 4. Twirl down the layer and select the pin "Path" object to view the location of your new pin on the map. Drag your pin into the appropriate location on the map.
 5. Now, drag your new pin layer into the appropriate order in the layers panel. For pins with tooltips to their right, it works best to have locations further to the left on the map higher in the layers. This ensures that the rollover state goes over any pins to the right and reduces the chances for map pins displaying on top of other map meta data. Taking the time now to ensure that your layer is in the proper order will save time in the future.
-6. Back in the layers panel, select the project information layer folder (i.e. _Location_25_Project_Information_).
-10. Rename this folder using the following naming convention: _Location_#_Project Information_, where _#_ is your current pin number. For this example, our new layer would be named, _Location_25_Project_Information_.
+6. Back in the layers panel, select the project information layer folder (i.e. `Location_25_Project_Information`).
+10. Rename this folder using the following naming convention: `Location_#_Project_Information`, where _#_ is your current pin number. For this example, our new layer would be named, `Location_25_Project_Information`.
 11. Position this layer next to its corresponding pin. Ensure that this layer does not overlap the pin in any way. That way, pin interaction will not be interrupted by a tooltip pop-up.
 12. Modify the text in the Location Name, Project Type and State, Country text boxes in your new group. Simply double-click on the text you'd like to modify in the canvas.
 13. If you are adding multiple locations, ensure all of your other layers follow this naming convention and grouping.
@@ -19,7 +19,7 @@ The pins and tooltips are created using the following Sketch file: GlobeIllustra
 ## Exporting
 1. **Make sure each layer in your Sketch document is set to visible.** Any layers left hidden will not be exported to the SVG. To toggle visibility on a layer, hover over the layer in the layers panel and click the eye icon to the right of the layer name. When complete, you should see all of the locations pins and their corresponding tooltip on the map.
 2. Go to **File > Export**. Click **Export.**
-3. Name the export _globe_locations_date.svg_, where _date_ is the date of your export (e.g. _globe_locations_03-24-21.svg_).
+3. Name the export `globe_locations_date.svg`, where _date_ is the date of your export (e.g. `globe_locations_03-24-21.svg`).
 4. Click **Save**. Save the file to your corresponding folder on your server or desktop.
 
 ### Modify the SVG to add CSS Class
@@ -38,9 +38,9 @@ The pins and tooltips are created using the following Sketch file: GlobeIllustra
 
 
 ## Creating the mobile version of the file
-1. Open the most recent version of the **ageto_energy_globe_mobile_updated** Sketch file. 
+1. Open the most recent version of the `ageto_energy_globe_mobile_updated`Sketch file. 
 1. Using the layers panel on the left side of Sketch, select and existing pin and right-click on it. Choose duplicate and then move the new pin to its corresponding new location on the map. Save the file. 
-2. Go to **File > Export.** Click **Export**. Rename the file to append today's date, like so: **ageto_energy_globe_mobile_updated_03-24-21.svg** and save to its corresponding folder.
+2. Go to **File > Export.** Click **Export**. Rename the file to append today's date, like so: `ageto_energy_globe_mobile_updated_03-24-21.svg` and save to its corresponding folder.
 
 ### Adding the mobile view
 1. In the 1/1 container directly below the Code Block you just modified, upload the new mobile svg image file you created. *No need to copy and paste the SVG here, as this will only be an image*. Save the image container.
