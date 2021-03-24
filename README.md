@@ -50,7 +50,7 @@ The pins and tooltips are created using the following Sketch file: GlobeIllustra
 1. Be sure to check mobile sizes for your new mobile map image as well. 
 1. Debug any strange overlaps, etc. by reordering the layers in your svg file to suit the new map. 
 1. Click **Update**. 
-1. Clear any caches on the site. 
+1. In the Wordpress left-hand panel, navigate to **WPEngine > General Settings** then click the **Purge all caches** button.
 
 ## Additional Resources
 1. Ageto Energy location map (updated 02-04-21): https://www.google.com/maps/d/u/0/edit?mid=1kyaZQfb_zhICuGYE9hdB9tVA75mjnfd8&usp=sharing
