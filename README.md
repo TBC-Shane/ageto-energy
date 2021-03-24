@@ -6,31 +6,38 @@ CSS is also required to enable the hover states of the various pins on the page.
 
 The pins and tooltips are created using the following Sketch file: GlobeIllustrationBlue_DEV. The workflow for generating this file, and then modifying it for interaction is as follows:
 1. Open GlobeIllustrationBlue_DEV using Sketch. If you do not own a copy of the Sketch application, you can purchase it [here.](https://www.sketch.com/)
-2. Down the left-hand side of the application you will find a list of layers. Spin down the _pins_ layer and then spin down the _Pin Icons_ layer.  
+2. Down the left-hand side of the application you will find a list of layers. Spin down the _pins_ layer and then spin down the _Pin Icons_ layer. 
+![Sketch Pins image](https://github.com/TBC-Shane/ageto-energy/blob/Sketch-Homepage-Globe-SOP/images/sketch_pins.png) 
 3. Duplicate one of the existing pin layers by right-clicking on the layer name (e.g. `Location_24`) and selecting Duplicate. Rename it in the layers panel to the next location number in the string. For example, if there are 24 existing pins, rename your pin layer to `Location_25`. **The naming of each of the layers in this walkthrough is crucial to saving time and to maintaining an orderly and programmable file structure when output as an SVG file.**
 4. Twirl down the layer and select the pin "Path" object to view the location of your new pin on the map. Drag your pin into the appropriate location on the map.
+![Sketch Path image](https://github.com/TBC-Shane/ageto-energy/blob/Sketch-Homepage-Globe-SOP/images/sketch_path.png) 
 5. Now, drag your new pin layer into the appropriate order in the layers panel. For pins with tooltips to their right, it works best to have locations further to the left on the map higher in the layers. This ensures that the rollover state goes over any pins to the right and reduces the chances for map pins displaying on top of other map meta data. Taking the time now to ensure that your layer is in the proper order will save time in the future.
 6. Back in the layers panel, select the project information layer folder (i.e. `Location_25_Project_Information`).
 10. Rename this folder using the following naming convention: `Location_#_Project_Information`, where _#_ is your current pin number. For this example, our new layer would be named, `Location_25_Project_Information`.
 11. Position this layer next to its corresponding pin. Ensure that this layer does not overlap the pin in any way. That way, pin interaction will not be interrupted by a tooltip pop-up.
-12. Modify the text in the Location Name, Project Type and State, Country text boxes in your new group. Simply double-click on the text you'd like to modify in the canvas.
-13. If you are adding multiple locations, ensure all of your other layers follow this naming convention and grouping.
+12. ![Sketch tooltip image](https://github.com/TBC-Shane/ageto-energy/blob/Sketch-Homepage-Globe-SOP/images/sketch_tooltip.png)
+13. Modify the text in the Location Name, Project Type and State, Country text boxes in your new group. Simply double-click on the text you'd like to modify in the canvas.
+14. If you are adding multiple locations, ensure all of your other layers follow this naming convention and grouping.
 
 ## Exporting
-1. **Make sure each layer in your Sketch document is set to visible.** Any layers left hidden will not be exported to the SVG. To toggle visibility on a layer, hover over the layer in the layers panel and click the eye icon to the right of the layer name. When complete, you should see all of the locations pins and their corresponding tooltip on the map.
-2. Go to **File > Export**. Click **Export.**
-3. Name the export `globe_locations_date.svg`, where _date_ is the date of your export (e.g. `globe_locations_03-24-21.svg`).
-4. Click **Save**. Save the file to your corresponding folder on your server or desktop.
+1. **Make sure each layer in your Sketch document is set to visible.** 
+![Sketch preview image](https://github.com/TBC-Shane/ageto-energy/blob/Sketch-Homepage-Globe-SOP/images/sketch_preview.png)
+2. Any layers left hidden will not be exported to the SVG. To toggle visibility on a layer, hover over the layer in the layers panel and click the eye icon to the right of the layer name. When complete, you should see all of the locations pins and their corresponding tooltip on the map.
+3. Go to **File > Export**. Click **Export.**
+4. Name the export `globe_locations_date.svg`, where _date_ is the date of your export (e.g. `globe_locations_03-24-21.svg`).
+5. Click **Save**. Save the file to your corresponding folder on your server or desktop.
 
 ### Modify the SVG to add CSS Class
 1. Now open the file in the code editor of your choice. We recommend the free [Visual Studio Code](https://code.visualstudio.com/) if you don't already have a preference.
-1. To set up the hover state of each tootlip, we'll need to include a class on each project information panel. To do this, we can perform a search and replace for the end of the project information `id` that Sketch creates for us. For example, I search for `_Information"` and then replace it with `_Information" class="project-information"`. This adds the `project-information` class to each project information tooltip panel in the file. 
-2. To do this in Visual Studio, open your _globe_locations_date.svg_ file, then go to **Edit > Replace**. In the pop-up box's top search box enter `_Information"` and in the bottom replace box enter `_Information" class="project-information"`. On Mac, click **Command + Enter** on your keyboard to replace all (Click **ctrl + Enter on PC**). Alternatively you can click the second icon to the right of the replace box.  
+1. To set up the hover state of each tootlip, we'll need to include a class on each project information panel. To do this, we can perform a search and replace for the end of the project information `id` that Sketch creates for us. For example, I search for `_Information"` and then replace it with `_Information" class="project-information"`. This adds the `project-information` class to each project information tooltip panel in the file.
+2. To do this in Visual Studio, open your _globe_locations_date.svg_ file, then go to **Edit > Replace**. In the pop-up box's top search box enter `_Information"` and in the bottom replace box enter `_Information" class="project-information"`. On Mac, click **Command + Enter** on your keyboard to replace all (Click **ctrl + Enter on PC**). Alternatively you can click the second icon to the right of the replace box.
+![Code S&R image](https://github.com/TBC-Shane/ageto-energy/blob/Sketch-Homepage-Globe-SOP/images/visual_studio_code_searchandreplace.png) 
 3. Now save the file. Keep this file open, we'll use it in a moment.
 
 
 ## Preparing the website
 ### Adding the SVG code
+![Avada SVG Block image](https://github.com/TBC-Shane/ageto-energy/blob/Sketch-Homepage-Globe-SOP/images/avada_svg_codeblock.png) 
 1. Navigate to the homepage and edit the page. Scroll down to the Code Block in the **100% Satisfied** section. Copy the SVG code from your code editor and paste the SVG code **in-between** the `<div>` tags. The structure should be as follows:
 `<div class="globe-pins">`
 `your new svg code`
@@ -44,6 +51,7 @@ The pins and tooltips are created using the following Sketch file: GlobeIllustra
 
 ### Adding the mobile view
 1. In the 1/1 container directly below the Code Block you just modified, upload the new mobile svg image file you created. *No need to copy and paste the SVG here, as this will only be an image*. Save the image container.
+![Avada Mobile Block image](https://github.com/TBC-Shane/ageto-energy/blob/Sketch-Homepage-Globe-SOP/images/svg_mobile_image_block.png) 
 
 ### Finishing up
 1. Preview the changes you have made to the homepage to ensure your new svg code is displaying as intended. 
