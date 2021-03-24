@@ -1,25 +1,23 @@
 # ageto-energy
 ## Sketch Homepage Globe SOP
-The globe illustration on the homepage of the Ageto Energy site is built completely in SVG. There are currently two files being loaded in:
-* The globe itself: ageto_energy_globe_icon_white.svg, loaded into the page using Avada's Image Block
-* The pins and their corresponding tooltips: globe_locations_pins.svg, loaded onto the page with Avada's Code Block. 
+The globe illustration on the homepage of the Ageto Energy site is built completely in SVG. When a user hovers over a pin, a corresponding tooltip will display showing the location's project information.
 
-CSS is also required to enable the hover states of the various pins on the page. Update Toolbox Creative (hosting@toolboxcreative.com) should the map exceed 50 locations.
+CSS is also required to enable the hover states of the various pins on the page. Please contact Toolbox Creative (hosting@toolboxcreative.com) should the map exceed 50 locations and we will add an additional number of locations as needed.
 
-The pins and tooltips are created using the following .eps file: GlobeIllustrationBlue_DEV.svg. The workflow for generating this file, and then modifying it for interaction is as follows:
+The pins and tooltips are created using the following Sketch file: GlobeIllustrationBlue_DEV. The workflow for generating this file, and then modifying it for interaction is as follows:
 1. Open GlobeIllustrationBlue_DEV using Sketch. If you do not own a copy of the Sketch application, you can purchase it [here.](https://www.sketch.com/)
-2. Down the left-hand side of the application you will find a list of layers. Spin down the "pins" layer and then spin down the Pin Icons layer.  
+2. Down the left-hand side of the application you will find a list of layers. Spin down the `pins` layer and then spin down the `Pin Icons` layer.  
 3. Duplicate one of the existing pin layers by right-clicking on the layer name (e.g. _Location_24_) and selecting Duplicate. Rename it in the layers panel to the next location number in the string. For example, if there are 24 existing pins, rename your pin layer to _Location 25_. **The naming of each of the layers in this walkthrough is crucial to saving time and to maintaining an orderly and programmable file structure when output as an SVG file.**
 4. Twirl down the layer and select the pin "Path" object to view the location of your new pin on the map. Drag your pin into the appropriate location on the map.
 5. Now, drag your new pin layer into the appropriate order in the layers panel. For pins with tooltips to their right, it works best to have locations further to the left on the map higher in the layers. This ensures that the rollover state goes over any pins to the right and reduces the chances for map pins displaying on top of other map meta data. Taking the time now to ensure that your layer is in the proper order will save time in the future.
 6. Back in the layers panel, select the project information layer folder (i.e. _Location_25_Project_Information_).
-10. Rename this folder usinh the following naming convention: _Location_#_Project Information_, where _#_ is your current pin number. For this example, our new layer would be named, _Location_25_Project_Information_.
+10. Rename this folder using the following naming convention: _Location_#_Project Information_, where _#_ is your current pin number. For this example, our new layer would be named, _Location_25_Project_Information_.
 11. Position this layer next to its corresponding pin. Ensure that this layer does not overlap the pin in any way. That way, pin interaction will not be interrupted by a tooltip pop-up.
 12. Modify the text in the Location Name, Project Type and State, Country text boxes in your new group. Simply double-click on the text you'd like to modify in the canvas.
 13. If you are adding multiple locations, ensure all of your other layers follow this naming convention and grouping.
 
 ## Exporting
-1. Make sure each layer in your Sketch document is visible. Any layers left hidden will not be exported to the SVG. To toggle visibility on a layer, hover over the layer in the layers panel and click the eye icon to the right of the layer name.
+1. **Make sure each layer in your Sketch document is set to visible.** Any layers left hidden will not be exported to the SVG. To toggle visibility on a layer, hover over the layer in the layers panel and click the eye icon to the right of the layer name. When complete, you should see all of the locations pins and their corresponding tooltip on the map.
 2. Go to **File > Export**. Click **Export.**
 3. Name the export _globe_locations_date.svg_, where _date_ is the date of your export (e.g. _globe_locations_03-24-21.svg_).
 4. Click **Save**. Save the file to your corresponding folder on your server or desktop.
@@ -27,7 +25,7 @@ The pins and tooltips are created using the following .eps file: GlobeIllustrati
 ### Modify the SVG to add CSS Class
 1. Now open the file in the code editor of your choice. We recommend the free [Visual Studio Code](https://code.visualstudio.com/) if you don't already have a preference.
 1. To set up the hover state of each tootlip, we'll need to include a class on each project information panel. To do this, we can perform a search and replace for the end of the project information `id` that Sketch creates for us. For example, I search for `_Information"` and then replace it with `_Information" class="project-information"`. This adds the `project-information` class to each project information tooltip panel in the file. 
-2. In Visual Studio, open your _globe_locations_date.svg_ file, then go to **Edit > Replace**. In the top search box enter `_Information"` and in the bottom replace box enter `_Information" class="project-information"`. On Mac, click **Command + Enter** on your keyboard to replace all (Click **ctrl + Enter on PC**). Alternatively you can click the second icon to the right of the replace box.  
+2. To do this in Visual Studio, open your _globe_locations_date.svg_ file, then go to **Edit > Replace**. In the pop-up box's top search box enter `_Information"` and in the bottom replace box enter `_Information" class="project-information"`. On Mac, click **Command + Enter** on your keyboard to replace all (Click **ctrl + Enter on PC**). Alternatively you can click the second icon to the right of the replace box.  
 3. Now save the file. Keep this file open, we'll use it in a moment.
 
 
