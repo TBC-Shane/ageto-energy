@@ -4,8 +4,8 @@ The globe illustration on the homepage of the Ageto Energy site is built complet
 
 CSS is also required to enable the hover states of the various pins on the page. Please contact Toolbox Creative (hosting@toolboxcreative.com) should the map exceed 50 locations and we will add an additional number of locations as needed.
 
-The pins and tooltips are created using the following Sketch file: GlobeIllustrationBlue_DEV. The workflow for generating this file, and then modifying it for interaction is as follows:
-1. Open GlobeIllustrationBlue_DEV using Sketch. If you do not own a copy of the Sketch application, you can purchase it [here.](https://www.sketch.com/)
+The pins and tooltips are created using the following Sketch file: ageto_energy_globe_desktop. The workflow for generating this file, and then modifying it for interaction is as follows:
+1. Open ageto_energy_globe_desktop using Sketch. If you do not own a copy of the Sketch application, you can purchase it [here.](https://www.sketch.com/)
 2. Down the left-hand side of the application you will find a list of layers. Spin down the _pins_ layer and then spin down the _Pin Icons_ layer. 
 3. ![Sketch Pins image](https://github.com/TBC-Shane/ageto-energy/blob/Sketch-Homepage-Globe-SOP/images/sketch_pins.png) 
 4. Duplicate one of the existing pin layers by right-clicking on the layer name (e.g. `Location_24`) and selecting Duplicate. Rename it in the layers panel to the next location number in the string. For example, if there are 24 existing pins, rename your pin layer to `Location_25`. **The naming of each of the layers in this walkthrough is crucial to saving time and to maintaining an orderly and programmable file structure when output as an SVG file.**
